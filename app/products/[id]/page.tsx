@@ -5,6 +5,7 @@ import { ArrowLeftIcon } from "lucide-react";
 import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: { id: string };
@@ -27,6 +28,10 @@ export async function generateMetadata(
 
 async function ProductDetailPage({ params: { id } }: Props) {
   const product = await fetchProduct(id);
+
+  if (!product) {
+    notFound();
+  }
 
   return (
     <main className="py-6 px-4 md:px-12 bg-gray-50 dark:bg-gray-800 max-w-7xl mx-auto min-h-screen">
