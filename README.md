@@ -31,11 +31,7 @@
 - [🚀 Getting Started](#-getting-started)
   - [🔧 Installation](#-installation)
   - [🤖 Running product-listing-part2-nextjs](#-running-product-listing-part2-nextjs)
-  - [🧪 Tests](#-tests)
-- [🛣 Roadmap](#-roadmap)
-- [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
-- [👏 Acknowledgments](#-acknowledgments)
 
 ---
 
