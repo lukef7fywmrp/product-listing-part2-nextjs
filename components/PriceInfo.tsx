@@ -44,7 +44,12 @@ function PriceInfo({ price }: { price: number }) {
           <p className="font-bold text-2xl">{price} AED</p>
         </div>
 
-        <Button variant={"secondary"} size={"icon"} className="h-14 w-14">
+        <Button
+          name="cart"
+          variant={"secondary"}
+          size={"icon"}
+          className="h-14 w-14"
+        >
           <ShoppingBag className="text-[#9098A5]" />
         </Button>
       </div>

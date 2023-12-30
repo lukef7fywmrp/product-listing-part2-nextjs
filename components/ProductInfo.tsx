@@ -46,7 +46,12 @@ function ProductInfo({
       <div className="flex items-center justify-between space-x-2">
         <p className="text-2xl font-semibold w-60 line-clamp-4">{title}</p>
 
-        <Button variant={"secondary"} size={"icon"} className="h-14 w-14">
+        <Button
+          name="wishlist"
+          variant={"secondary"}
+          size={"icon"}
+          className="h-14 w-14"
+        >
           <Heart className="text-[#9098A5]" />
         </Button>
       </div>
