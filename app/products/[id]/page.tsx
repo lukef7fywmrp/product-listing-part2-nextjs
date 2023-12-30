@@ -2,14 +2,30 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { fetchProduct } from "@/lib/data";
 import { ArrowLeftIcon } from "lucide-react";
+import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-async function ProductDetailPage({
-  params: { id },
-}: {
+type Props = {
   params: { id: string };
-}) {
+};
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // read route params
+  const id = params.id;
+
+  const product = await fetchProduct(id);
+
+  return {
+    title: product.title,
+    description: product.description,
+  };
+}
+
+async function ProductDetailPage({ params: { id } }: Props) {
   const product = await fetchProduct(id);
 
   return (
